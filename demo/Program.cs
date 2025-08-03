@@ -45,6 +45,7 @@ namespace demo
         {
             #region Video-3
             ////Method Overloading
+
             //int a = 10, b = 20, c = 30;
             //int result = SumNumbers(a, b);
             //result = SumNumbers(a, b, c);
@@ -54,23 +55,53 @@ namespace demo
             #endregion
 
             #region Video-4
-            //Operators Overloading
+            ////Operators Overloading => Binary Operators
 
             Complexx C1 = new Complexx();
             C1.Real = 10;
             C1.Img = 5;
             Console.WriteLine(C1);
 
-            Complexx C2 = new Complexx() { Real=6 , Img=2};
+            Complexx C2 = new Complexx() { Real = 6, Img = 2 };
             Console.WriteLine(C2);
 
             Complexx C3 = new Complexx();
-            C3 = C1 + C2;//Invalid before Operator overloading
-            C3 += C1;//valid because it a (C3=C3+C1) 
-            C3 = C1 - C2;//VALID AFTER OPERATOR OVERLOADING
-            Console.WriteLine($"C3={C3}");
+            //C3 = C1 + C2;//Invalid before Operator overloading
+            //C3 += C1;//valid because it a (C3=C3+C1) 
+            //C3 = C1 - C2;//VALID AFTER OPERATOR OVERLOADING
+            //Console.WriteLine($"C3={C3}");
 
             #endregion
+
+            #region Video-5
+            //operator overloading => unary operator
+            C3 = ++C1;
+            Console.WriteLine("prefix");
+            Console.WriteLine($"C1={C1}");
+            Console.WriteLine($"C3={C3}");
+
+            //C3 = C1++;
+            //Console.WriteLine("postfex");
+            //Console.WriteLine($"C1={C1}");
+            //Console.WriteLine($"C3={C3}");
+
+            //C3 = --C1;
+            //C3 = ++C1;
+            //Console.WriteLine("prefix");
+            //Console.WriteLine($"C1={C1}");
+            //Console.WriteLine($"C3={C3}");
+
+
+            //C3 = C1--;
+            //Console.WriteLine("postfix");
+            //Console.WriteLine($"C1={C1}");
+            //Console.WriteLine($"C3={C3}");
+
+
+
+            #endregion
+
+
         }
     }
 }

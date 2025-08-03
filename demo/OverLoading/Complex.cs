@@ -46,8 +46,25 @@ namespace demo.OverLoading
 
         }
 
-            #endregion
+        public static Complexx operator ++(Complexx left , Complexx right)
+        {
+            return new Complexx() 
+            {
+                Real = (left?.Real ?? 0) + 1 ,
+                Img = (left?.Img ?? 0)
+            };
         }
+
+        public static Complexx operator --(Complexx left, Complexx right)
+        {
+            return new Complexx()
+            {
+                Real = (left?.Real ?? 0) - 1,
+                Img = (left?.Img ?? 0)
+            };
+        }
+        #endregion
+    }
     }
 
 
